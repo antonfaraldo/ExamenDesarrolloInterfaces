@@ -3,8 +3,8 @@ package org.example.examen2eval_di_afm.model;
 public class Usuario {
     private String username;
     private String password;
-    private Enum admin;
-    public Usuario() {}
+    private Boolean admin;
+    public Usuario(String nickname, String password, boolean admin) {}
     public Usuario(String username, String password) {
         this.username = username;
         this.password = password;
