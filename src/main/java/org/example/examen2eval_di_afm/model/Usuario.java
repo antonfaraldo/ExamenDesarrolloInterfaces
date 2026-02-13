@@ -4,10 +4,11 @@ public class Usuario {
     private String username;
     private String password;
     private Boolean admin;
-    public Usuario(String nickname, String password, boolean admin) {}
-    public Usuario(String username, String password) {
+    public Usuario() {}
+    public Usuario(String username, String password,  Boolean admin) {
         this.username = username;
         this.password = password;
+        this.admin = admin;
     }
 
     public String getUsername() {
