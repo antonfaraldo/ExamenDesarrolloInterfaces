@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UsuarioDAO {public class UsuarioDao {
+public class UsuarioDAO {
 
     public Usuario validarUsuario(String username, String password){
         String sql = "Select * from usuarios where username = ? and password = ?";
@@ -19,7 +19,7 @@ public class UsuarioDAO {public class UsuarioDao {
             try(ResultSet rs = ps.executeQuery()){
                 if (rs.next()){
                     return new Usuario(
-                            rs.getString("nickname"),
+                            rs.getString("username"),
                             rs.getString("password"),
                             rs.getBoolean("admin")
                     );
@@ -55,6 +55,4 @@ public class UsuarioDAO {public class UsuarioDao {
             throw new RuntimeException(e);
         }
     }
-}
-
 }
